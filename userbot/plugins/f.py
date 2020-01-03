@@ -2,7 +2,7 @@ from telethon import events
 import asyncio
 import os
 import sys
-from uniborg import util
+import uniborg.util
 
 
 @borg.on(util.admin_cmd(pattern="ftext ?(.*)"))
