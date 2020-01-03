@@ -7,7 +7,7 @@ import asyncio
 from telethon import events
 import telethon.utils
 
-from uniborg.util import admin_cmd,is_read
+from uniborg.util import admin_cmd,re
 
 
 async def get_target_message(event):
