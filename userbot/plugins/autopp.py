@@ -19,7 +19,7 @@ import shutil
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 VERY_PIC = "https://pes2020.sirv.com/mn.jpg" 
 
-@borg.on(admin_cmd(pattern="autopp"))
+@borg.on(admin_cmd(pattern="aautopp"))
 
 async def autopic(event):
 
