@@ -14,11 +14,12 @@ from telethon import events
 
 import asyncio
 
+from userbot.utils import admin_cmd
 
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"\.(.*)"))
 
 async def _(event):
 
@@ -57,7 +58,7 @@ async def _(event):
 
             await event.edit(animation_chars[i % 10])
 
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"\.(.*)"))
 
 async def _(event):
 
@@ -97,7 +98,7 @@ async def _(event):
             await event.edit(animation_chars[i % 10])
 
 
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"\.(.*)"))
 
 async def _(event):
 
