@@ -9,10 +9,10 @@ import os
 import asyncio
 from uniborg.util import admin_cmd
 from telethon import events
+from userbot.utils import admin_cmd
 
 
-
-@borg.on(events.NewMessage(pattern=r"\.upb", outgoing=True))
+@borg.on(admin_cmd(pattern=r"upb"))
 async def batch_upload(event):
 	if event.fwd_from:
 		return   
