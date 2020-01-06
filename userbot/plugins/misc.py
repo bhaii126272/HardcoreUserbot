@@ -10,7 +10,7 @@
 from random import randint
 from time import sleep
 
-from userbot import HELPER
+
 from userbot.events import register
 
 
@@ -50,28 +50,3 @@ async def bot_support(wannahelp):
         await wannahelp.edit("Link Portal: @userbot_support")
 
 
-HELPER.update({
-    'random': '.random <item1> <item2> ... <itemN>\
-\nUsage: Get a random item from the list of items.'
-})
-
-HELPER.update({
-    'sleep': '.sleep 10\
-\nUsage: Userbots get tired too. Let yours snooze for a few seconds.'
-})
-
-HELPER.update({
-    "shutdown": ".shutdown\
-\nUsage: Sometimes you need to restart your bot. Sometimes you just hope to\
-hear Windows XP shutdown sound... but you don't."
-})
-
-HELPER.update({
-    'support': ".support\
-\nUsage: If you need help, use this command."
-})
-
-HELPER.update({
-    'repo': '.repo\
-\nUsage: If you are curious what makes the Userbot work, this is what you need.'
-})
