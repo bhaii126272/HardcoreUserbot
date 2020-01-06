@@ -13,7 +13,7 @@ from telegraph import Telegraph
 from bs4 import BeautifulSoup as bs
 import requests
 from telethon import events
-
+from userbot.utils import admin_cmd
 
 telegraph = Telegraph()
 telegraph.create_account(short_name='zeroc')
@@ -260,7 +260,7 @@ csclist = ['ACG',
                 'CTC']         
 
 csclist = sorted(csclist)
-@borg.on(events.NewMessage(pattern=r"\.check", outgoing=True))
+@borg.on(admin_cmd(pattern=r"check"))
 async def checker(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("Fetching Information, Wait!")
@@ -347,7 +347,7 @@ async def checker(e):
         await e.delete()
         
         
-@borg.on(events.NewMessage(pattern=r"\.otaup", outgoing=True))
+@borg.on(admin_cmd(pattern=r"otaup"))
 async def checker(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("Fetching Information, Wait!")
