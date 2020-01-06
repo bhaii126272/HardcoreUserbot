@@ -24,7 +24,7 @@ isekai_list = ['12 Beast ', '100 Sleeping Princes and the Kingdom of Dreams ', "
 async def _(event):
     if event.fwd_from:
         return   
-    number_of_times = event.text[8:]
+    number_of_times = event.text[7:]
     number_of_times = int(number_of_times)
     i = 0
     anime_list = []
