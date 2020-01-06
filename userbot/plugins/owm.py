@@ -15,7 +15,7 @@ from pytz import timezone as tz
 
 from userbot import CMD_HELP
 from userbot import OPEN_WEATHER_MAP_APPID as OWM_API
-from userbot import is_mongo_alive, is_redis_alive
+from userbot import is_mongodb_alive, is_redis_alive
 from userbot.events import register
 from userbot.modules.dbhelper import get_weather, set_weather
 
@@ -49,7 +49,7 @@ async def fetch_weather(weather):
         return
 
     OpenWeatherAPI = OWM_API
-    saved_props = await get_weather() if is_mongo_alive() else None
+    saved_props = await get_weather() if is_mongodb_alive() else None
 
     if not weather.pattern_match.group(1):
         if 'weather_city' in saved_props:
@@ -143,7 +143,7 @@ async def fetch_weather(weather):
 async def set_default_city(city):
     """ For .setcity command, change the default
         city for weather command. """
-    if not is_mongo_alive() or not is_redis_alive():
+    if not is_mongodb_alive() or not is_redis_alive():
         await city.edit(DB_FAILED)
         return
 
