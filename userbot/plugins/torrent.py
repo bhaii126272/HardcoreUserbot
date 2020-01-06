@@ -30,7 +30,7 @@ aria2 = aria2p.API(
 
 
 @borg.on(admin_cmd(pattern=r"magnet"))
-async def magnet_download(event);
+async def magnet_download(event):
 	if event.fwd_from:
 		return
 	var = event.text
