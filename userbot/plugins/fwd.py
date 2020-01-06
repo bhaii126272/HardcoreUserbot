@@ -2,6 +2,8 @@
 to know how many users have seen your message
 Syntax: .fwd as reply to any message"""
 from telethon import events
+from telethon import sync
+from telethon.tl import types, functions
 from uniborg.util import admin_cmd
 
 
