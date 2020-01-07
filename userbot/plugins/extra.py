@@ -9,8 +9,9 @@ from telethon.tl.functions.channels import LeaveChannelRequest, CreateChannelReq
 from collections import deque
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.events import register
+from userbot.utils import admin_cmd
 
-@register(outgoing=True, pattern="^.leave$")
+@borg.on(admin_cmd("leave$"))
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`I iz Leaving dis Kensur Group kek!`")
@@ -20,31 +21,36 @@ async def leave(e):
         else:
             await e.edit('`Sar This is Not A Chat`')
 
-@register(outgoing=True, pattern="^;__;$")
+@borg.on(admin_cmd(";__;$"))
+//@register(outgoing=True, pattern="^;__;$")
 async def fun(e):
     t = ";__;"
     for j in range(10):
         t = t[:-1] + "_;"
         await e.edit(t)
 
-@register(outgoing=True, pattern="^Oof$")
+@borg.on(admin_cmd("Oof$"))
+//@register(outgoing=True, pattern="^Oof$")
 async def Oof(e):
     t = "Oof"
     for j in range(15):
         t = t[:-1] + "of"
         await e.edit(t)
 
-@register(outgoing=True, pattern="^.cry$")
+@borg.on(admin_cmd("ccry$"))
+//@register(outgoing=True, pattern="^.cry$")
 async def cry(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("(;´༎ຶД༎ຶ)")
 
-@register(outgoing=True, pattern="^.fp$")
+@borg.on(admin_cmd("fp$"))
+//@register(outgoing=True, pattern="^.fp$")
 async def facepalm(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("🤦‍♂")
 
-@register(outgoing=True, pattern="^.mmoon$")
+@borg.on(admin_cmd("moon$"))
+//@register(outgoing=True, pattern="^.mmoon$")
 async def _(event):
 	if event.fwd_from:
 		return
@@ -54,7 +60,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
 		
-		
+/*		
 @register(outgoing=True, pattern="^.eearth$")
 async def _(event):
 	if event.fwd_from:
@@ -64,18 +70,20 @@ async def _(event):
 		await asyncio.sleep(0.1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
-
-@register(outgoing=True, pattern="^.source$")
+*/
+@borg.on(admin_cmd("source$"))
+//@register(outgoing=True, pattern="^.source$")
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/spyderzz/Userbot/")
+        await e.edit("https://github.com/japarmar/X-tra-Telegram")
 
-@register(outgoing=True, pattern="^.readme$")
+@borg.on(admin_cmd("readme$"))
+//@register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://github.com/spyderzz/Userbot/blob/master/README.md")
+        await e.edit("https://github.com/japarmar/X-tra-Telegram/blob/master/README.md")
 
-
+/*
 @register(outgoing=True, pattern="^.cclock$")
 async def _(event):
 	if event.fwd_from:
@@ -85,8 +93,10 @@ async def _(event):
 		await asyncio.sleep(0.1)
 		await event.edit("".join(deq))
 		deq.rotate(1)
-		
-@register(outgoing=True, pattern="^.heart$")
+*/
+
+@borg.on(admin_cmd("heart$"))		
+//@register(outgoing=True, pattern="^.heart$")
 async def _(event):
 	if event.fwd_from:
 		return
@@ -96,7 +106,8 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
 		
-@register(outgoing=True, pattern="^.fap$")
+@borg.on(admin_cmd("fap$"))
+//@register(outgoing=True, pattern="^.fap$")
 async def _(event):
 	if event.fwd_from:
 		return
@@ -106,7 +117,8 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
 
-@register(outgoing=True, pattern="^.myusernames$")
+@borg.on(admin_cmd("myusernames$"))
+//@register(outgoing=True, pattern="^.myusernames$")
 async def _(event):
     if event.fwd_from:
         return
