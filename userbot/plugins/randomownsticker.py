@@ -29,7 +29,7 @@ def choser(cmd, pack, blacklist={}):
 
 
 choser('rstic', '@Halto_Tha ki gufa me')
-choser('ranstic', 'Jayu/'s', {
+choser('ranstic', 'Jayu\'s', {
     1653974154589768377,
     1653974154589768312,
     1653974154589767857,
