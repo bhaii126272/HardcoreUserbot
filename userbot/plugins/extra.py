@@ -60,17 +60,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
 		
-/*		
-@register(outgoing=True, pattern="^.eearth$")
-async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
-	for _ in range(48):
-		await asyncio.sleep(0.1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
-*/
+
 @borg.on(admin_cmd("source$"))
 //@register(outgoing=True, pattern="^.source$")
 async def source(e):
@@ -83,17 +73,7 @@ async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("https://github.com/japarmar/X-tra-Telegram/blob/master/README.md")
 
-/*
-@register(outgoing=True, pattern="^.cclock$")
-async def _(event):
-	if event.fwd_from:
-		return
-	deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
-	for _ in range(32):
-		await asyncio.sleep(0.1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
-*/
+
 
 @borg.on(admin_cmd("heart$"))		
 #@register(outgoing=True, pattern="^.heart$")
