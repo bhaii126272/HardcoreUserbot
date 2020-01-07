@@ -28,8 +28,8 @@ def choser(cmd, pack, blacklist={}):
         await event.respond(file=random.choice(docs))
 
 
-choser('rstic', '@Halto_Tha ki gufa me')
-choser('ranstic', 'Jayu\'s', {
+choser('rstic', 'JayukeStickers')
+choser('ranstic', 'JayukeAnimated', {
     1653974154589768377,
     1653974154589768312,
     1653974154589767857,
