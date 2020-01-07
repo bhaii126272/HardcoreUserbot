@@ -4,9 +4,9 @@ import traceback
 import asyncio
 import sys
 import io
+from userbot.utils import admin_cmd
 
-
-@command(pattern="^.exec")
+@borg.on(admin_cmd(".exec"))
 async def _(event):
     if event.fwd_from:
         return
