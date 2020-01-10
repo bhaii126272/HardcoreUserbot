@@ -20,6 +20,5 @@ async def _(event):
     if event.fwd_from:
          return
     bro = random.randint(0, len(RUNSREACTS) - 1)    
-    input_str = event.pattern_match.group(1)
     reply_text = RUNSREACTS[bro]
     await event.edit(reply_text)
