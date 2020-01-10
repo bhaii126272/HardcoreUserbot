@@ -45,7 +45,7 @@ async def gethash(hash_q):
         await hash_q.reply(ans)
 
 
-@register(outgoing=True, pattern="^.base64 (en|de) (.*)")
+@register(outgoing=True, pattern="^.64base (en|de) (.*)")
 @errors_handler
 async def endecrypt(query):
     """ For .base64 command, find the base64 encoding of the given string. """
