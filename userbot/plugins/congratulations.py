@@ -3,16 +3,16 @@ import random, re
 from uniborg.util import admin_cmd
 
 RUNSREACTS = [
-    "`Runs to Thanos`",
-    "`Runs far, far away from earth`",
-    "`Running faster than usian bolt coz I'mma Bot`",
-    "`Runs to Marie`",
-    "`This Group is too cancerous to deal with.`",
-    "`Cya bois`",
-    "`I am a mad person. Plox Ban me.`",
-    "`I go away`",
-    "`I am just walking off, coz me is too fat.`",
-    "`I Fugged off!`",
+    “`Congratulations and BRAVO!`”,
+    "`You did it! So proud of you!`",
+    "`This calls for celebrating! Congratulations!`",
+    "`I knew it was only a matter of time. Well done!`",
+    "`Congratulations on your well-deserved success.`",
+    "`Heartfelt congratulations to you.`",
+    "`Warmest congratulations on your achievement.`",
+    "`Congratulations and best wishes for your next adventure!”`",
+    "`So pleased to see you accomplishing great things.`",
+    "`Feeling so much joy for you today. What an impressive achievement!`",
 ]
 
 @borg.on(admin_cmd(pattern="congo"))
