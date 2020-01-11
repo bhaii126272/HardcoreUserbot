@@ -5,7 +5,7 @@ from telethon import events
 import random
 import asyncio
 
-@borg.on(events.NewMessage(pattern=r"\.jainder(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"jainder(.*)"))
 async def _(event):
     if event.fwd_from:
         return
