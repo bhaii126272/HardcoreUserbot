@@ -14,11 +14,11 @@ from telethon import events
 
 import asyncio
 
+from uniborg.util import admin_cmd
 
 
 
-
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"(.*)"))
 
 async def _(event):
 
