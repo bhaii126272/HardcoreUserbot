@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"\.(.*)"))
+@borg.on(admin_cmd(pattern=r"(.*)"))
 
 async def _(event):
 
