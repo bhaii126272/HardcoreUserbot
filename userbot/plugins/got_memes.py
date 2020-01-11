@@ -16,7 +16,7 @@ import random
 
 from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd(pattern=r"\.gotm"))
+@borg.on(admin_cmd(pattern=r"gotm"))
 
 async def _(event):
 
