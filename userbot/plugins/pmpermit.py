@@ -13,25 +13,25 @@ USER_BOT_WARN_ZERO = "I am currently offline. Please do not SPAM me. "
 USER_BOT_NO_WARN = "`[──▄█▀█▄─────────██ \n▄████████▄───▄▀█▄▄▄▄ \n██▀▼▼▼▼▼─▄▀──█▄▄ \n█████▄▲▲▲─▄▄▄▀───▀▄ \n██████▀▀▀▀─▀────────▀▀]\n\nHello, I'm Personal Assistance of Jayu Sir. If you spam you will be reported and blocked, so make sure you **DON'T SPAM**.\n\nYour companionship is always an opportunity But Sed This line is not for you.`"
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @command(pattern="^.pm ?(.*)")
-    async def approve_p_m(event):
-        if event.fwd_from:
-           return
-        replied_user = await event.client(GetFullUserRequest(event.chat_id))
-        firstname = replied_user.user.first_name
-        reason = event.pattern_match.group(1)
-        chat = await event.get_chat()
-        if event.is_private:
-            if not pmpermit_sql.is_approved(chat.id):
-                if chat.id in PM_WARNS:
-                    del PM_WARNS[chat.id]
-                if chat.id in PREV_REPLY_MESSAGE:
-                    await PREV_REPLY_MESSAGE[chat.id].delete()
-                    del PREV_REPLY_MESSAGE[chat.id]
-                pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved to pm [{}](tg://user?id={})".format(firstname, chat.id))
-                await asyncio.sleep(3)
-                await event.delete()
+ #   @command(pattern="^.pm ?(.*)")
+  #  async def approve_p_m(event):
+   #     if event.fwd_from:
+   #        return
+#        replied_user = await event.client(GetFullUserRequest(event.chat_id))
+ #       firstname = replied_user.user.first_name
+       # reason = event.pattern_match.group(1)
+        #chat = await event.get_chat()
+       # if event.is_private:
+          #  if not pmpermit_sql.is_approved(chat.id):
+           #     if chat.id in PM_WARNS:
+               #     del PM_WARNS[chat.id]
+             #   if chat.id in PREV_REPLY_MESSAGE:
+                #    await PREV_REPLY_MESSAGE[chat.id].delete()
+                 #   del PREV_REPLY_MESSAGE[chat.id]
+              #  pmpermit_sql.approve(chat.id, reason)
+              #  await event.edit("Approved to pm [{}](tg://user?id={})".format(firstname, chat.id))
+              #  await asyncio.sleep(3)
+              #  await event.delete()
 
 
     @command(pattern="^.block ?(.*)")
