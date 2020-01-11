@@ -1,30 +1,23 @@
 try:
     from userbot.modules.sql_helper import SESSION, BASE
 except ImportError:
-    raise AttributeError
-from sqlalchemy import Column, UnicodeText, Numeric, String
+    raise Exception("Hello!")
+from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
 
 
 class Notes(BASE):
     __tablename__ = "notes"
     chat_id = Column(String(14), primary_key=True)
     keyword = Column(UnicodeText, primary_key=True, nullable=False)
-    f_mesg_id = Column(Numeric)
+    reply = Column(UnicodeText, nullable=False)
 
-    def __init__(self, chat_id, keyword, f_mesg_id):
-        self.chat_id = str(chat_id)
+    def __init__(self, chat_id, keyword, reply):
+        self.chat_id = str(chat_id)  # ensure string
         self.keyword = keyword
-        self.f_mesg_id = f_mesg_id
+        self.reply = reply
 
 
 Notes.__table__.create(checkfirst=True)
-
-
-def get_note(chat_id, keyword):
-    try:
-        return SESSION.query(Notes).get((str(chat_id), keyword))
-    finally:
-        SESSION.close()
 
 
 def get_notes(chat_id):
@@ -34,33 +27,21 @@ def get_notes(chat_id):
         SESSION.close()
 
 
-def add_note(chat_id, keyword, f_mesg_id):
-    to_check = get_note(chat_id, keyword)
-    if not to_check:
-        adder = Notes(str(chat_id), keyword, f_mesg_id)
-        SESSION.add(adder)
-        SESSION.commit()
-        return True
+def add_note(chat_id, keyword, reply):
+    adder = SESSION.query(Notes).get((str(chat_id), keyword))
+    if adder:
+        adder.reply = reply
     else:
-        rem = SESSION.query(Notes).get((str(chat_id), keyword))
-        SESSION.delete(rem)
-        SESSION.commit()
-        adder = Notes(str(chat_id), keyword, f_mesg_id)
-        SESSION.add(adder)
-        SESSION.commit()
-        return False
+        adder = Notes(str(chat_id), keyword, reply)
+    SESSION.add(adder)
+    SESSION.commit()
 
 
 def rm_note(chat_id, keyword):
-    to_check = get_note(chat_id, keyword)
-    if not to_check:
-        return False
-    else:
-        rem = SESSION.query(Notes).get((str(chat_id), keyword))
-        SESSION.delete(rem)
+    note = SESSION.query(Notes).filter(Notes.chat_id == str(chat_id), Notes.keyword == keyword)
+    if note:
+        note.delete()
         SESSION.commit()
-        return True
-
 
 def rm_all_notes(chat_id):
     notes = SESSION.query(Notes).filter(Notes.chat_id == str(chat_id))
