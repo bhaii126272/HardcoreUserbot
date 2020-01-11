@@ -56,7 +56,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern=r"\.(.*)"))
+@borg.on(admin_cmd(pattern=r"(.*)"))
 
 async def _(event):
 
