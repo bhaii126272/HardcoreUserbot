@@ -14,9 +14,9 @@ import sys
 
 import random
 
+from uniborg.util import admin_cmd
 
-
-@borg.on(events.NewMessage(pattern=r"\.gotm", outgoing=True))
+@borg.on(admin_cmd(pattern=r"\.gotm"))
 
 async def _(event):
 
