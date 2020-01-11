@@ -2,8 +2,9 @@ from telethon import events
 import asyncio
 import os
 import sys
+from uniborg.util import admin_cmd
 
-@borg.on(events.NewMessage(pattern=r"\.test", outgoing=True))
+@borg.on(admin_cmd(pattern=r"test"))
 async def test(event):
     if event.fwd_from:
         return 
