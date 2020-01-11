@@ -9,7 +9,7 @@ from userbot.utils import admin_cmd
 import random
 
 
-@borg.on(events.NewMessage(pattern=r"\.shout", outgoing=True))
+@borg.on(admin_cmd(pattern=r"shout"))
 async def shout(args):
     if args.fwd_from:
         return
