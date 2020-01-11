@@ -16,7 +16,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd("\.(.*)"))
+@borg.on(admin_cmd("(.*)"))
 
 async def _(event):
 
@@ -53,7 +53,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@borg.on(admin_cmd("\.(.*)"))
+@borg.on(admin_cmd("(.*)"))
 
 async def _(event):
 
@@ -101,7 +101,7 @@ import asyncio
 
 
 
-@borg.on(admin_cmd("\.(.*)"))
+@borg.on(admin_cmd("(.*)"))
 
 async def _(event):
 
