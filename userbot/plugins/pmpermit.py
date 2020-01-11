@@ -11,7 +11,7 @@ from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from sqlalchemy.exc import IntegrityError 
 
-from userbot import (COUNT_PM, HELPER, LOGGER, LOGGER_GROUP, NOTIF_OFF,
+from userbot import (COUNT_PM, LOGGER, LOGGER_GROUP, NOTIF_OFF,
                      PM_AUTO_BAN, BRAIN_CHECKER, LASTMSG, LOGS)
 from userbot.events import register
 
@@ -200,17 +200,3 @@ async def unblockpm(unblock):
                 " was unblocc'd!.",
             )
 
-HELPER.update({
-    "pmpermit": "\
-.approve\
-\nUsage: Approves the mentioned/replied person to PM.\
-\n\n.block\
-\nUsage: Blocks the person from PMing you.\
-\n\n.unblock\
-\nUsage: Unblocks the person so they can PM you.\
-\n\n.notifoff\
-\nUsage: Clears any notifications of unapproved PMs.\
-\n\n.notifon\
-\nUsage: Allows notifications for unapproved PMs.\
-"
-})
