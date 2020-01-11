@@ -3,9 +3,9 @@
 from telethon import events
 import asyncio
 from collections import deque
+from uniborg.util import admin_cmd
 
-
-@borg.on(events.NewMessage(pattern=r"\.moon animation", outgoing=True))
+@borg.on(admin_cmd(pattern=r"moon", outgoing=True))
 async def _(event):
 	if event.fwd_from:
 		return
