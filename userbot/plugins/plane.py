@@ -3,9 +3,9 @@ from telethon import events
 import asyncio
 import os
 import sys
+from uniborg.util import admin_cmd
 
-
-@borg.on(events.NewMessage(pattern=r"\.plane", outgoing=True))
+@borg.on(admin_cmd(pattern=r"plane"))
 async def _(event):
     if event.fwd_from:
         return
