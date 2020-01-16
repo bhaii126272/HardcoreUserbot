@@ -29,8 +29,8 @@ def choser(cmd, pack, blacklist={}):
 
 
 choser('rstic', 'Jayu_ke_locker_me')
-choser('rastic', 'Jayu_ke_adult_stickers)
-choser('ranastic', 'Jayu_Adult_Animated)
+choser('rastic', 'Jayu_ke_adult_stickers')
+choser('ranastic', 'Jayu_Adult_Animated')
 choser('ranstic', 'Jayu_Animated', {
     1653974154589768377,
     1653974154589768312,
