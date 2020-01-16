@@ -65,7 +65,7 @@ async def on_snip(event):
                 last_triggered_filters[event.chat_id].remove(name)
 
 
-@borg.on(admin_cmd("savefilter (.*)"))
+@borg.on(admin_cmd("^.filter(?: |$)(.*)"))
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     msg = await event.get_reply_message()
