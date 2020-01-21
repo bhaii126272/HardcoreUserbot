@@ -53,9 +53,9 @@ Bio: {}
 DC ID: {}
 Number of PPs: {}
 Restricted? : {}
-Verified gey: {}
+Verified: {}
 Bot(nub): {}
-Groups in Common with this gey: {}
+Groups in Common: {}
 """.format(
         user_id,
         user_id,
