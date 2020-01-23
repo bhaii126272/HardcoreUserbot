@@ -8,11 +8,11 @@ from telethon import events
 
 import asyncio
 
+from uniborg.util import admin_cmd
 
 
 
-
-@borg.on(events.NewMessage(pattern=r"\.deploy", outgoing=True))
+@borg.on(admin_cmd(pattern=r"deploy"))
 
 async def _(event):
 
@@ -32,9 +32,9 @@ async def _(event):
 
     animation_chars = [
         
-            "**Heroku Connecting To Latest Github Build (Pornhub)**",
-            "**Build started by user** @r4v4n4",
-            "**Deploy** `535a74f0` **by user** @r4v4n4",
+            "**Heroku Connecting To Latest Github Build (X-tra-Telegram)**",
+            "**Build started by user** @Halto_Tha",
+            "**Deploy** `535a74f0` **by user** @Halto_Tha",
             "**Restarting Heroku Server...**",
             "**State changed from up to starting**",    
             "**Stopping all processes with SIGTERM**",
