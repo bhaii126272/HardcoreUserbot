@@ -16,7 +16,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd("(.*)"))
+@borg.on(admin_cmd("fuk"))
 
 async def _(event):
 
@@ -28,13 +28,13 @@ async def _(event):
 
     animation_ttl = range(0, 101)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "fuk":
+   # if input_str == "fuk":
 
-        await event.edit(input_str)
+    await event.edit("fuk")
 
-        animation_chars = [
+    animation_chars = [
 
             "👉       ✊️",
 
@@ -46,14 +46,14 @@ async def _(event):
 
         ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 4])
+        await event.edit(animation_chars[i % 4])
 
 
-@borg.on(admin_cmd("(.*)"))
+@borg.on(admin_cmd("sux"))
 
 async def _(event):
 
@@ -65,13 +65,13 @@ async def _(event):
 
     animation_ttl = range(0, 101)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "sux":
+    #if input_str == "sux":
 
-        await event.edit(input_str)
+    await event.edit("sux")
 
-        animation_chars = [
+    animation_chars = [
 
             "🤵       👰",
 
@@ -83,11 +83,11 @@ async def _(event):
 
         ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 4])
+        await event.edit(animation_chars[i % 4])
 
 
 ""
@@ -101,7 +101,7 @@ import asyncio
 
 
 
-@borg.on(admin_cmd("(.*)"))
+@borg.on(admin_cmd("kiss"))
 
 async def _(event):
 
@@ -113,13 +113,13 @@ async def _(event):
 
     animation_ttl = range(0, 101)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "kiss":
+    #if input_str == "kiss":
 
-        await event.edit(input_str)
+    await event.edit("kiss")
 
-        animation_chars = [
+    animation_chars = [
 
             "🤵       👰",
 
@@ -131,8 +131,8 @@ async def _(event):
 
         ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 4])
+        await event.edit(animation_chars[i % 4])
