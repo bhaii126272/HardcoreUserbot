@@ -29,9 +29,9 @@ async def _(event):
 
     #if input_str == "hack":
 
-     await event.edit("Hacking..")
+    await event.edit("Hacking..")
 
-     animation_chars = [
+    animation_chars = [
         
             "`Connecting To Hacked Private Server...`",
             "`Target Selected.`",
