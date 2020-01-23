@@ -18,7 +18,7 @@ async def _(event):
 
         return
 
-    animation_interval = 0.5
+    animation_interval = 1
 
     animation_ttl = range(0, 30)
 
@@ -26,7 +26,7 @@ async def _(event):
 
    # if input_str == "chu":
 
-    await event.edit(input_str)
+    await event.edit("Nice...")
 
     animation_chars = [
 
