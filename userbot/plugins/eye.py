@@ -24,7 +24,7 @@ async def _(event):
 
     #if input_str == "eye":
 
-    await event.edit(input_str)
+    await event.edit("👁👁")
 
     animation_chars = [
 
