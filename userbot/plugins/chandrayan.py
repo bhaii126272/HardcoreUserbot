@@ -10,11 +10,12 @@ from telethon import events
 
 import asyncio
 
+from uniborg.util import admin_cmd
 
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"isro"))
 
 async def _(event):
 
@@ -30,7 +31,7 @@ async def _(event):
 
   #  if input_str == "isro":
 
-    await event.edit(input_str)
+    await event.edit("Connecting..")
 
     animation_chars = [
         
