@@ -12,7 +12,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"(.*)"))
+@borg.on(admin_cmd(pattern=r"ding"))
 
 async def _(event):
 
@@ -20,17 +20,17 @@ async def _(event):
 
         return
 
-    animation_interval = 0.3
+    animation_interval = 0.5
 
     animation_ttl = range(0, 10)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "ding":
+    #if input_str == "ding":
 
-        await event.edit(input_str)
+    await event.edit(input_str)
 
-        animation_chars = [
+    animation_chars = [
         
             "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
             "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
@@ -45,8 +45,8 @@ async def _(event):
 
  ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 10])
