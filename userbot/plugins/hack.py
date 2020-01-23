@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"(.*)"))
+@borg.on(admin_cmd(pattern=r"hack"))
 
 async def _(event):
 
@@ -25,13 +25,13 @@ async def _(event):
 
     animation_ttl = range(0, 11)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "hack":
+    #if input_str == "hack":
 
-        await event.edit(input_str)
+     await event.edit("Hacking..")
 
-        animation_chars = [
+     animation_chars = [
         
             "`Connecting To Hacked Private Server...`",
             "`Target Selected.`",
@@ -46,8 +46,8 @@ async def _(event):
             "`Targeted Account Hacked...\n\nPay 69$ To` @Halto_Tha `To Remove this hack..`"
         ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 11])
+        await event.edit(animation_chars[i % 11])
