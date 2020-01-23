@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"(.*)"))
+@borg.on(admin_cmd(pattern=r"fleave"))
 
 async def _(event):
 
@@ -25,13 +25,13 @@ async def _(event):
 
     animation_ttl = range(0, 17)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "fleave":
+    #if input_str == "fleave":
 
-        await event.edit(input_str)
+    await event.edit("fleave")
 
-        animation_chars = [
+    animation_chars = [
         
             "⬛⬛⬛\n⬛⬛⬛\n⬛⬛⬛",
             "⬛⬛⬛\n⬛🔄⬛\n⬛⬛⬛",
@@ -51,8 +51,8 @@ async def _(event):
 
  ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 17])
+        await event.edit(animation_chars[i % 17])
