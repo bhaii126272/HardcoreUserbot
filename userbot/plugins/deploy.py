@@ -28,7 +28,7 @@ async def _(event):
 
 
 
-    await event.edit(input_str)
+    await event.edit("Typing...")
 
     animation_chars = [
         
