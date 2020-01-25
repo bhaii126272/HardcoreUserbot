@@ -971,7 +971,7 @@ async def hoi(hello):
     if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
         await hello.edit(random.choice(HELLOSTR))
 			  
-@register(outgoing=True, pattern="^.kill$")
+@register(outgoing=True, pattern="^.pkill$")
 async def killing (killed):
     """ Dont Kill Too much -_-"""
     if not killed.text[0].isalpha() and killed.text[0] not in ("/", "#", "@", "!"):
