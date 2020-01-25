@@ -22,7 +22,7 @@ from telethon.tl.types import MessageEntityMentionName
 from cowpy import cow
 
 from userbot import CMD_HELP,YOUTUBE_API_KEY
-from userbot.utils import register
+from userbot.utils import register,admin_cmd
 
 # ================= CONSTANT =================
 RENDISTR = [
@@ -662,7 +662,8 @@ HIT = [
 # ===========================================
 
 
-@register(outgoing=True, pattern=r"^.(\w+)say (.*)")
+#@register(outgoing=True, pattern=r"^.(\w+)say (.*)")
+@borg.on(admin_cmd(pattern=r"(\w+)say (.*)"))
 async def univsaye(cowmsg):
     """ For .cowsay module, userbot wrapper for cow which says things. """
     if not cowmsg.text[0].isalpha() and cowmsg.text[0] not in ("/", "#", "@", "!"):
