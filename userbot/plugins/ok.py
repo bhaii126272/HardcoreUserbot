@@ -18,7 +18,7 @@ async def _(event):
     animation_ttl = range(0,36)
     input_str = event.pattern_match.group(1)
    # if input_str == "ok":
-    await event.edit(input_str)
+    await event.edit("ok")
     animation_chars = [
             "F",
             "U",
