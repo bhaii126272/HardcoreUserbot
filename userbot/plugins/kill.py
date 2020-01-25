@@ -8,7 +8,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern="(.*)"))
+@borg.on(admin_cmd(pattern="kill"))
 
 async def _(event):
 
@@ -23,11 +23,11 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "kill":
+    #if input_str == "kill":
 
-        await event.edit(input_str)
+    await event.edit("killing..")
 
-        animation_chars = [
+    animation_chars = [
 
             "Ｆｉｉｉｉｉｒｅ",
             "(　･ิω･ิ)︻デ═一-->",    
@@ -43,7 +43,7 @@ async def _(event):
             "**Target killed successfully (°̥̥̥̥̥̥̥̥•̀.̫•́°̥̥̥̥̥̥̥)**",
         ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
 
-            await event.edit(animation_chars[i % 10])
+        await event.edit(animation_chars[i % 10])
