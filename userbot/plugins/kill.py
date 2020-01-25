@@ -21,7 +21,7 @@ async def _(event):
 
     animation_ttl = range(0, 103)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
     #if input_str == "kill":
 
