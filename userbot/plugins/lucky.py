@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern="(.*)"))
+@borg.on(admin_cmd(pattern="lucky"))
 
 async def _(event):
 
@@ -25,13 +25,13 @@ async def _(event):
 
     animation_ttl = range(0, 17)
 
-    input_str = event.pattern_match.group(1)
+    #input_str = event.pattern_match.group(1)
 
-    if input_str == "lucky":
+    #if input_str == "lucky":
 
-        await event.edit(input_str)
+    await event.edit("Lucky..")
 
-        animation_chars = [
+    animation_chars = [
         
             "⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
             "⬛⬜⬜⬜⬜\n👇⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜[🎁](https://github.com/japarmar/X-tra-Telegram/)⬜",
@@ -53,8 +53,8 @@ async def _(event):
 
  ]
 
-        for i in animation_ttl:
+    for i in animation_ttl:
 
-            await asyncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
 
-            await event.edit(animation_chars[i % 17])
+        await event.edit(animation_chars[i % 17])
