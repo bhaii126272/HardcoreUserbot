@@ -679,7 +679,7 @@ async def univsaye(cowmsg):
         await cowmsg.edit(f"`{cheese.milk(text).replace('`', '´')}`")
 
 
-@register(outgoing=True, pattern="^:/$")
+@register(outgoing=True, pattern="^.:/$")
 async def kek(keks):
     if not keks.text[0].isalpha() and keks.text[0] not in ("/", "#", "@", "!"):
         """ Check yourself ;)"""
@@ -786,7 +786,7 @@ async def slap(replied_user, event):
 
     return caption
 
-@register(outgoing=True, pattern="^-_-$")
+@register(outgoing=True, pattern="^.-_-$")
 async def lol(lel):
     if not lel.text[0].isalpha() and lel.text[0] not in ("/", "#", "@", "!"):
         """ Ok... """
@@ -812,7 +812,7 @@ async def _(event):
         )
         await event.delete()
 
-@register(outgoing=True, pattern="^;_;$")
+@register(outgoing=True, pattern="^.;_;$")
 async def fun(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         t = ";__;"
