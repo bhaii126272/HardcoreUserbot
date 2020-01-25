@@ -34,7 +34,7 @@ async def _(event):
 
    # if input_str == "nakal":
 
-    await event.edit(input_str)
+    await event.edit("nakal")
 
     animation_chars = [
         
