@@ -36,6 +36,12 @@ async def _(event):
     if first_name is not None:
         # some weird people (like me) have more than 4096 characters in their names
         first_name = first_name.replace("\u2060", "")
+    last_name = html.escape(replied_user.user.last_name)
+    # https://stackoverflow.com/a/5072031/4723940
+    # some Deleted Accounts do not have first_name
+    if last_name is not None:
+        # some weird people (like me) have more than 4096 characters in their names
+        last_name = last_name.replace("\u2060", "")
     # inspired by https://telegram.dog/afsaI181
     user_bio = replied_user.about
     if user_bio is not None:
@@ -49,6 +55,7 @@ async def _(event):
     caption = """Extracted Userdata From Jayu's DATABASE
 ID: <code>{}</code>
 Person Name: <a href='tg://user?id={}'>{}</a>
+Last Name:{}
 Bio: {}
 DC ID: {}
 Number of PPs: {}
@@ -60,6 +67,7 @@ Groups in Common: {}
         user_id,
         user_id,
         first_name,
+        last_name
         user_bio,
         dc_id,
         replied_user_profile_photos_count,
