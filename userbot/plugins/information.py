@@ -42,8 +42,8 @@ async def _(event):
    # if last_name is not None:
         # some weird people (like me) have more than 4096 characters in their names
        # last_name = last_name.replace("\u2060", "")
-    if last_name is None:
-        last_name = ("This user don't have Last Name")
+    #if last_name is None:
+        #last_name = ("This user don't have Last Name")
     # inspired by https://telegram.dog/afsaI181
     user_bio = replied_user.about
     if user_bio is not None:
@@ -57,7 +57,7 @@ async def _(event):
     caption = """Extracted Userdata From Jayu's DATABASE
 ID: <code>{}</code>
 Person Name: <a href='tg://user?id={}'>{}</a>
-Last Name:{}
+
 Bio: {}
 DC ID: {}
 Number of PPs: {}
@@ -69,7 +69,7 @@ Groups in Common: {}
         user_id,
         user_id,
         first_name,
-        last_name,
+        
         user_bio,
         dc_id,
         replied_user_profile_photos_count,
