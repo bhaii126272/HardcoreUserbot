@@ -67,7 +67,7 @@ Groups in Common: {}
         user_id,
         user_id,
         first_name,
-        last_name
+        last_name,
         user_bio,
         dc_id,
         replied_user_profile_photos_count,
