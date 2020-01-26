@@ -42,6 +42,8 @@ async def _(event):
     if last_name is not None:
         # some weird people (like me) have more than 4096 characters in their names
         last_name = last_name.replace("\u2060", "")
+    elif last_name is None:
+        last_name = ("This user don't have Last Name")
     # inspired by https://telegram.dog/afsaI181
     user_bio = replied_user.about
     if user_bio is not None:
