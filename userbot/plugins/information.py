@@ -36,7 +36,7 @@ async def _(event):
     if first_name is not None:
         # some weird people (like me) have more than 4096 characters in their names
         first_name = first_name.replace("\u2060", "")
-    last_name = html.escape(replied_user.user.last_name)
+   # last_name = html.escape(replied_user.user.last_name)
     # https://stackoverflow.com/a/5072031/4723940
     # some Deleted Accounts do not have first_name
    # if last_name is not None:
