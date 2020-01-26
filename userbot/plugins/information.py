@@ -39,10 +39,10 @@ async def _(event):
     last_name = html.escape(replied_user.user.last_name)
     # https://stackoverflow.com/a/5072031/4723940
     # some Deleted Accounts do not have first_name
-    if last_name is not None:
+   # if last_name is not None:
         # some weird people (like me) have more than 4096 characters in their names
-        last_name = last_name.replace("\u2060", "")
-    elif last_name is None:
+       # last_name = last_name.replace("\u2060", "")
+    if last_name is None:
         last_name = ("This user don't have Last Name")
     # inspired by https://telegram.dog/afsaI181
     user_bio = replied_user.about
