@@ -62,9 +62,9 @@ Bio: {}
 DC ID: {}
 Number of PPs: {}
 Restricted? : {}
-Verified: {}
+Verified Gey: {}
 Bot(nub): {}
-Groups in Common: {}
+Groups in Common With This Gaandu: {}
 """.format(
         user_id,
         user_id,
