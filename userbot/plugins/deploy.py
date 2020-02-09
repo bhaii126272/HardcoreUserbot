@@ -32,7 +32,7 @@ async def _(event):
 
     animation_chars = [
         
-            "**Heroku Connecting To Latest Github Build (X-tra-Telegram)**",
+            "**Heroku Connecting To Latest Github Build (HardcoreUserbot)**",
             "**Build started by user** @Hack12R",
             "**Deploy** `535a74f0` **by user** @Hack12R",
             "**Restarting Heroku Server...**",
